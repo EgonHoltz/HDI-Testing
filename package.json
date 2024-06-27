@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@grpc/grpc-js": "^1.10.1",
+    "@grpc/proto-loader": "^0.7.10",
+    "amqplib": "^0.10.3"
+  },
+  "name": "TestMQUsingNode",
+  "version": "1.0.0",
+  "main": "dataGeneratorService.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
