@@ -9,16 +9,16 @@ syntax = "proto3";
 
 package grpc;
 
-service ReceiveDataService {
-  rpc receiveRqst(ServiceDataRequest) returns(ServiceDataResponse) {}
+service SendRetrieveDataService {
+  rpc sendRqst(SendDataRequest) returns(SendDataResponse) {}
 }
 
-message ServiceDataRequest {
+message SendDataRequest {
   string clientId = 1;
   string jsonMsg = 2;
 }
 
-message ServiceDataResponse {
+message SendDataResponse {
   string clientId = 1;
   string jsonMsg = 2;
 }
@@ -52,9 +52,9 @@ function generateData() {
 async function sendDataBygRPC(jsonMsg) {
     console.log("Sending message");
     const clientId = "company-rda";
-    const client = new grpcPackage.ReceiveDataService('localhost:8070', grpc.credentials.createInsecure());
+    const client = new grpcPackage.SendRetrieveDataService('localhost:8070', grpc.credentials.createInsecure());
     console.log(" [x] Sent %s", jsonMsg );
-    client.receiveRqst({ clientId, jsonMsg }, (error, response) => {
+    client.sendRqst({ clientId, jsonMsg }, (error, response) => {
       if (!error) {
         console.log('Response from server:', response);
       } else {

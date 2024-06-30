@@ -1,7 +1,7 @@
 const amqp = require('amqplib');
 const { faker } = require('@faker-js/faker');
 
-const rabbitMqUrl = 'amqp://u-aaf:hahaha@localhost'; // Change this URL to your RabbitMQ server URL
+const rabbitMqUrl = 'amqp://u-aaf:hdi-pass@localhost'; // Change this URL to your RabbitMQ server URL
 const queue = 'client-aaf';
 
 // Function to generate data
